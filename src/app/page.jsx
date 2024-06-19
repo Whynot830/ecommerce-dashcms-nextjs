@@ -1,8 +1,8 @@
 'use client'
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "@/components/ui/checkbox";
 
+import Pagination from "@/components/Pagination";
 import {
   Card,
   CardContent,
@@ -10,32 +10,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-import {
-  Cloud,
-  CreditCard,
-  Github,
-  Keyboard,
-  LifeBuoy,
-  LogOut,
-  Mail,
-  MessageSquare,
-  Plus,
-  PlusCircle,
-  Settings,
-  User,
-  UserPlus,
-  Users,
-} from "lucide-react"
+} from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -49,11 +24,38 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import Pagination from "@/components/Pagination";
-import { useEffect, useState } from "react";
-import { toast } from "@/components/ui/use-toast";
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { ToastAction } from "@/components/ui/toast";
+import { toast } from "@/components/ui/use-toast";
+import {
+  Cloud,
+  CreditCard,
+  GitBranch,
+  GitCommit,
+  Github,
+  Gitlab,
+  Keyboard,
+  LifeBuoy,
+  LogOut,
+  Mail,
+  MessageSquare,
+  Plus,
+  PlusCircle,
+  Settings,
+  User,
+  UserPlus,
+  Users,
+} from "lucide-react";
+import { useState } from "react";
 export default function Home() {
   const [page, setPage] = useState(0)
   const trigger = () => {
@@ -106,12 +108,12 @@ export default function Home() {
 
       <div className="flex items-center space-x-2">
         <Checkbox id="terms" />
-        <label
+        <Label
           htmlFor="terms"
           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           Accept terms and conditions
-        </label>
+        </Label>
       </div>
 
       <DropdownMenu>
@@ -217,6 +219,9 @@ export default function Home() {
           })
         }}
       />
+      <GitBranch>123</GitBranch>
+        <GitCommit></GitCommit>
+        <Gitlab></Gitlab>
     </main>
   );
 }
